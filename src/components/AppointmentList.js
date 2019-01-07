@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Appointment from './Appointment';
+import PropTypes from 'prop-types';
 
 class AppointmentList extends Component {
 
@@ -27,6 +28,11 @@ class AppointmentList extends Component {
             </div>
         );
     }
+}
+
+AppointmentList.propTypes = {
+    appointments: PropTypes.array.isRequired,
+    destroyAppointment: PropTypes.func.isRequired
 }
  
 export default AppointmentList;

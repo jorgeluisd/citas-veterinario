@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Appointment extends Component {
 
@@ -22,6 +23,19 @@ class Appointment extends Component {
             </div>
          );
     }
+}
+
+Appointment.propTypes = {
+    destroyAppointment: PropTypes.func.isRequired,
+    //Para validar cada registro del arreglo
+    data: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        pet: PropTypes.string.isRequired,
+        owner: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        time: PropTypes.string.isRequired,
+        symptoms: PropTypes.string.isRequired
+    })
 }
  
 export default Appointment;

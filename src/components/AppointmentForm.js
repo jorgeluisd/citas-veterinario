@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
+import PropTypes from 'prop-types';
 
 class AppointmentForm extends Component {
     //Refs
@@ -99,6 +100,10 @@ class AppointmentForm extends Component {
             </div>
         );
     }
+}
+
+AppointmentForm.propTypes = {
+    newAppointment: PropTypes.func.isRequired
 }
  
 export default AppointmentForm;
